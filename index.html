@@ -9,7 +9,6 @@
             margin: 0;
             padding: 20px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* Современный градиент: серо-синий */
             background: radial-gradient(circle at top left, #2b3440, #1a1e24);
             color: #e2e8f0;
             min-height: 100vh;
@@ -55,9 +54,8 @@
             margin: 0 auto;
         }
 
-        /* Стили для иконок */
         .item-icon {
-            width: 63px; /* 21px * 3 (увеличение) */
+            width: 63px;
             height: 63px;
             background-image: url('tilesheet.png');
             background-repeat: no-repeat;
@@ -79,7 +77,6 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         }
 
-        /* Модальное окно */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -131,7 +128,7 @@
         }
 
         .modal-icon {
-            width: 126px; /* 21px * 6 (очень крупно) */
+            width: 126px;
             height: 126px;
             background-image: url('tilesheet.png');
             background-repeat: no-repeat;
@@ -189,7 +186,6 @@
 
     <div id="grid" class="item-grid"></div>
 
-    <!-- Модальное окно -->
     <div id="modal-overlay" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" id="close-modal">&times;</button>
@@ -200,7 +196,6 @@
     </div>
 
     <script>
-        // Данные предметов (для краткости укажу все 248, но вы используете свой полный массив!)
         const items = [
             { id: 1, name: "Обойма", desc: "Добавляет 1 дополнительный снаряд. Снижает скорострельность на 30%, немного повышает разброс." },
             { id: 2, name: "Серебряная пуля", desc: "Повышает урон на 40%." },
@@ -458,11 +453,11 @@
             { id: 254, name: "Кровавая батарейка", desc: "Батарейки повышают максимальный запас здоровья вместо щита. Создаёт 1 батарейку." },
             { id: 255, name: "Гидрант", desc: "При получении урона персонаж временно начинает хаотично стрелять мини снарядами, а перегрев оружия становится неограниченным. Эффект длится 5 сек и может быть активирован не чаще, чем раз в 10 сек." },
             { id: 256, name: "Талисман", desc: "Повышает удачу на 1. Гарантированно блокирует урон от любого источника раз в 10 секунд. «По моему, это обычная пуговица...»" },
-            { id: 257, name: "Иголка", desc: "Рывок наносит персонажу 1 урон. Увеличивает силу рывка на 50%." }
+            { id: 257, name: "Иголка", desc: "Рывок наносит персонажу 1 урон. Увеличивает силу рывка на 50%." },
+            { id: 258, name: "Заряженный кубик", desc: "Батарейки дают 1 временную замену вместо щита. Создаёт 1 батарейку."},
+            { id: 259, name: "Транзистор", desc: "Все батарейки, найденные в дальнейшем, заменяются случайными картриджами. Создаёт 1 случайный картридж."},
+            { id: 260, name: "Колокол", desc: "При получении урона персонаж издаёт громкий звук колокола, отпугивающий существ в пределах видимости, но не чаще, чем раз в 3 сек."}
         ];
-        
-        // Дополнительная проверка: если вы скопировали массив из прошлого ответа, 
-        // он уже содержит все 248 предметов. Используйте его полностью здесь.
 
         const grid = document.getElementById('grid');
         const searchInput = document.getElementById('search');
@@ -473,8 +468,7 @@
         const modalDesc = document.getElementById('modal-desc');
         const closeModalBtn = document.getElementById('close-modal');
 
-        // Настройки спрайта
-        const scale = 3; // Увеличиваем в 3 раза (63px)
+        const scale = 3;
         const tileSize = 21;
         const columns = 20;
 
@@ -485,7 +479,6 @@
             return `-${x}px -${y}px`;
         }
 
-        // Отрисовка сетки
         function renderItems(filteredItems) {
             grid.innerHTML = '';
             countDisplay.textContent = `Найдено предметов: ${filteredItems.length}`;
@@ -499,21 +492,18 @@
                 const icon = document.createElement('div');
                 icon.className = 'item-icon';
                 icon.style.backgroundPosition = getSpritePosition(item.id);
-                icon.title = item.name; // Показываем название при наведении
+                icon.title = item.name;
                 
-                // Добавляем клик для открытия модалки
                 icon.onclick = () => openModal(item);
                 
                 grid.appendChild(icon);
             });
         }
 
-        // Логика модального окна
         function openModal(item) {
             modalName.textContent = item.name;
             modalDesc.textContent = item.desc;
             
-            // Увеличиваем иконку в модалке в 6 раз (126px)
             const modalScale = 6;
             const index = item.id - 1;
             const mX = (index % columns) * tileSize * modalScale;
@@ -522,20 +512,18 @@
             modalIcon.style.backgroundPosition = `-${mX}px -${mY}px`;
             modalIcon.style.backgroundSize = `${columns * tileSize * modalScale}px ${13 * tileSize * modalScale}px`;
 
-            modal.classList.add('active'); // Плавное появление
+            modal.classList.add('active');
         }
 
         function closeModal() {
-            modal.classList.remove('active'); // Плавное исчезновение
+            modal.classList.remove('active');
         }
 
-        // Закрытие по клику на фон или крестик
         modal.addEventListener('click', (e) => {
             if (e.target === modal) closeModal();
         });
         closeModalBtn.addEventListener('click', closeModal);
 
-        // Поиск
         function filterItems(query) {
             const lowerQuery = query.toLowerCase();
             return items.filter(item => {
@@ -550,7 +538,6 @@
             renderItems(filtered);
         });
 
-        // Первичная отрисовка
         renderItems(items);
     </script>
 </body>
