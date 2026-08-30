@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог предметов</title>
+    <title>Explored</title>
     <style>
         body {
             margin: 0;
@@ -121,8 +121,18 @@
             transform: scale(1) translateY(0);
         }
 
+        /* Новый блок для ID */
+        .modal-id {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            color: #a0aec0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
         .modal-content h2 {
-            margin: 0 0 20px 0;
+            margin: 0 60px 20px 60px; /* Добавили отступы по бокам, чтобы текст не налезал на ID и крестик */
             color: #f1f5f9;
             font-size: 24px;
         }
@@ -179,7 +189,7 @@
 <body>
 
     <div class="header">
-        <h1>КАТАЛОГ ПРЕДМЕТОВ</h1>
+        <h1>ПРЕДМЕТЫ</h1>
         <input type="text" id="search" placeholder="Поиск по названию или описанию...">
         <div id="count" class="count-display"></div>
     </div>
@@ -189,6 +199,9 @@
     <div id="modal-overlay" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" id="close-modal">&times;</button>
+            <!-- Добавили элемент для ID -->
+            <div id="modal-id" class="modal-id">ID: 0</div>
+            
             <h2 id="modal-name">Название</h2>
             <div id="modal-icon" class="modal-icon"></div>
             <div id="modal-desc" class="modal-desc">Описание...</div>
@@ -466,6 +479,7 @@
         const modalName = document.getElementById('modal-name');
         const modalIcon = document.getElementById('modal-icon');
         const modalDesc = document.getElementById('modal-desc');
+        const modalId = document.getElementById('modal-id'); // Объявили элемент ID
         const closeModalBtn = document.getElementById('close-modal');
 
         const scale = 3;
@@ -503,6 +517,9 @@
         function openModal(item) {
             modalName.textContent = item.name;
             modalDesc.textContent = item.desc;
+            
+            // Установили текст ID
+            modalId.textContent = `ID: ${item.id}`;
             
             const modalScale = 6;
             const index = item.id - 1;
