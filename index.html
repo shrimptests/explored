@@ -12,12 +12,12 @@
 
         body {
             margin: 0;
-            padding: 30px 20px 60px;
+            padding: 30px 20px 140px;
             font-family: 'Pixy', 'Courier New', monospace;
             letter-spacing: 2px;
             color: #d8cff0;
             min-height: 100vh;
-            background: linear-gradient(135deg, #0a0612 0%, #150a28 50%, #0d0618 100%);
+            background: linear-gradient(135deg, #070511 0%, #100a25 35%, #0a1533 65%, #08061a 100%);
             background-attachment: fixed;
             position: relative;
             overflow-x: hidden;
@@ -26,9 +26,12 @@
         /* ===== Фоновые слои ===== */
         .bg-stars-1,
         .bg-stars-2,
+        .bg-stars-3,
         .bg-mist-1,
         .bg-mist-2,
-        .bg-mist-3 {
+        .bg-mist-3,
+        .bg-mist-4,
+        .bg-mist-5 {
             position: fixed;
             inset: 0;
             pointer-events: none;
@@ -37,93 +40,149 @@
 
         .bg-stars-1 {
             background-image:
-                radial-gradient(1px 1px at 4% 12%, #ffffff, transparent),
-                radial-gradient(1px 1px at 11% 34%, #e9d5ff, transparent),
-                radial-gradient(1px 1px at 18% 7%, #ffffff, transparent),
-                radial-gradient(1.5px 1.5px at 24% 56%, #ffffff, transparent),
-                radial-gradient(1px 1px at 31% 22%, #c4b5fd, transparent),
-                radial-gradient(1px 1px at 39% 78%, #ffffff, transparent),
-                radial-gradient(1px 1px at 46% 41%, #e9d5ff, transparent),
-                radial-gradient(1.5px 1.5px at 54% 15%, #ffffff, transparent),
-                radial-gradient(1px 1px at 61% 68%, #ffffff, transparent),
-                radial-gradient(1px 1px at 68% 29%, #c4b5fd, transparent),
-                radial-gradient(1px 1px at 74% 84%, #ffffff, transparent),
-                radial-gradient(1.5px 1.5px at 81% 47%, #e9d5ff, transparent),
-                radial-gradient(1px 1px at 88% 18%, #ffffff, transparent),
-                radial-gradient(1px 1px at 94% 62%, #ffffff, transparent),
-                radial-gradient(1px 1px at 7% 88%, #c4b5fd, transparent),
-                radial-gradient(1px 1px at 42% 92%, #ffffff, transparent),
-                radial-gradient(1px 1px at 76% 6%, #ffffff, transparent),
-                radial-gradient(1px 1px at 58% 95%, #e9d5ff, transparent),
+                radial-gradient(1px 1px at 3% 12%, #ffffff, transparent),
+                radial-gradient(1px 1px at 8% 34%, #e9d5ff, transparent),
+                radial-gradient(1px 1px at 13% 7%, #ffffff, transparent),
+                radial-gradient(1.5px 1.5px at 18% 56%, #ffffff, transparent),
+                radial-gradient(1px 1px at 23% 22%, #c4b5fd, transparent),
+                radial-gradient(1px 1px at 28% 78%, #ffffff, transparent),
+                radial-gradient(1px 1px at 33% 41%, #bae6fd, transparent),
+                radial-gradient(1.5px 1.5px at 38% 15%, #ffffff, transparent),
+                radial-gradient(1px 1px at 43% 68%, #ffffff, transparent),
+                radial-gradient(1px 1px at 48% 29%, #c4b5fd, transparent),
+                radial-gradient(1px 1px at 53% 84%, #ffffff, transparent),
+                radial-gradient(1.5px 1.5px at 58% 47%, #bae6fd, transparent),
+                radial-gradient(1px 1px at 63% 18%, #ffffff, transparent),
+                radial-gradient(1px 1px at 68% 62%, #ffffff, transparent),
+                radial-gradient(1px 1px at 73% 88%, #c4b5fd, transparent),
+                radial-gradient(1px 1px at 78% 92%, #ffffff, transparent),
+                radial-gradient(1px 1px at 83% 6%, #ffffff, transparent),
+                radial-gradient(1px 1px at 88% 95%, #bae6fd, transparent),
+                radial-gradient(1px 1px at 93% 62%, #ffffff, transparent),
+                radial-gradient(1px 1px at 97% 38%, #e9d5ff, transparent),
                 radial-gradient(1px 1px at 2% 62%, #ffffff, transparent),
-                radial-gradient(1px 1px at 14% 47%, #e9d5ff, transparent),
+                radial-gradient(1px 1px at 14% 47%, #bae6fd, transparent),
                 radial-gradient(1px 1px at 27% 82%, #ffffff, transparent),
                 radial-gradient(1.5px 1.5px at 35% 5%, #ffffff, transparent),
                 radial-gradient(1px 1px at 43% 25%, #c4b5fd, transparent),
                 radial-gradient(1px 1px at 57% 51%, #ffffff, transparent),
-                radial-gradient(1px 1px at 64% 88%, #e9d5ff, transparent),
+                radial-gradient(1px 1px at 64% 88%, #bae6fd, transparent),
                 radial-gradient(1px 1px at 79% 10%, #ffffff, transparent),
                 radial-gradient(1.5px 1.5px at 85% 68%, #ffffff, transparent),
-                radial-gradient(1px 1px at 91% 40%, #c4b5fd, transparent);
+                radial-gradient(1px 1px at 91% 40%, #c4b5fd, transparent),
+                radial-gradient(1px 1px at 6% 25%, #ffffff, transparent),
+                radial-gradient(1px 1px at 17% 72%, #e9d5ff, transparent),
+                radial-gradient(1px 1px at 31% 47%, #ffffff, transparent),
+                radial-gradient(1px 1px at 46% 8%, #bae6fd, transparent),
+                radial-gradient(1px 1px at 61% 35%, #ffffff, transparent),
+                radial-gradient(1px 1px at 76% 62%, #c4b5fd, transparent),
+                radial-gradient(1px 1px at 88% 5%, #ffffff, transparent),
+                radial-gradient(1px 1px at 96% 82%, #e9d5ff, transparent);
             animation: twinkle1 3s ease-in-out infinite;
         }
 
         .bg-stars-2 {
             background-image:
-                radial-gradient(2px 2px at 15% 20%, #ffffff, transparent),
-                radial-gradient(2px 2px at 33% 62%, #e9d5ff, transparent),
-                radial-gradient(2px 2px at 51% 8%, #ffffff, transparent),
-                radial-gradient(2px 2px at 72% 55%, #c4b5fd, transparent),
-                radial-gradient(2px 2px at 87% 33%, #ffffff, transparent),
-                radial-gradient(2px 2px at 26% 88%, #ffffff, transparent),
-                radial-gradient(2px 2px at 63% 92%, #e9d5ff, transparent),
-                radial-gradient(2px 2px at 96% 74%, #ffffff, transparent),
-                radial-gradient(2px 2px at 5% 55%, #c4b5fd, transparent),
-                radial-gradient(2px 2px at 45% 35%, #ffffff, transparent),
-                radial-gradient(2px 2px at 9% 8%, #ffffff, transparent),
+                radial-gradient(2px 2px at 5% 20%, #ffffff, transparent),
+                radial-gradient(2px 2px at 15% 62%, #e9d5ff, transparent),
+                radial-gradient(2px 2px at 25% 8%, #ffffff, transparent),
+                radial-gradient(2px 2px at 35% 55%, #bae6fd, transparent),
+                radial-gradient(2px 2px at 45% 33%, #ffffff, transparent),
+                radial-gradient(2px 2px at 55% 88%, #ffffff, transparent),
+                radial-gradient(2px 2px at 65% 42%, #e9d5ff, transparent),
+                radial-gradient(2px 2px at 75% 74%, #ffffff, transparent),
+                radial-gradient(2px 2px at 85% 25%, #bae6fd, transparent),
+                radial-gradient(2px 2px at 95% 55%, #ffffff, transparent),
+                radial-gradient(2px 2px at 10% 85%, #ffffff, transparent),
                 radial-gradient(2px 2px at 22% 45%, #e9d5ff, transparent),
                 radial-gradient(2px 2px at 39% 18%, #ffffff, transparent),
-                radial-gradient(2px 2px at 56% 78%, #c4b5fd, transparent),
+                radial-gradient(2px 2px at 56% 78%, #bae6fd, transparent),
                 radial-gradient(2px 2px at 68% 6%, #ffffff, transparent),
                 radial-gradient(2px 2px at 82% 88%, #e9d5ff, transparent),
                 radial-gradient(2px 2px at 92% 22%, #ffffff, transparent),
-                radial-gradient(2px 2px at 3% 78%, #ffffff, transparent);
+                radial-gradient(2px 2px at 3% 78%, #ffffff, transparent),
+                radial-gradient(2px 2px at 29% 92%, #bae6fd, transparent),
+                radial-gradient(2px 2px at 49% 5%, #ffffff, transparent);
             animation: twinkle2 4.5s ease-in-out infinite 0.8s;
+        }
+
+        .bg-stars-3 {
+            background-image:
+                radial-gradient(0.8px 0.8px at 7% 15%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 12% 45%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 19% 78%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 26% 30%, #c4b5fd, transparent),
+                radial-gradient(0.8px 0.8px at 32% 62%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 41% 88%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 48% 12%, #bae6fd, transparent),
+                radial-gradient(0.8px 0.8px at 55% 45%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 62% 75%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 71% 25%, #c4b5fd, transparent),
+                radial-gradient(0.8px 0.8px at 77% 55%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 84% 18%, #bae6fd, transparent),
+                radial-gradient(0.8px 0.8px at 91% 82%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 4% 55%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 21% 5%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 37% 42%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 52% 92%, #c4b5fd, transparent),
+                radial-gradient(0.8px 0.8px at 69% 8%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 87% 42%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 98% 12%, #bae6fd, transparent);
+            animation: twinkle1 2.2s ease-in-out infinite 0.5s;
         }
 
         .bg-mist-1,
         .bg-mist-2,
-        .bg-mist-3 {
+        .bg-mist-3,
+        .bg-mist-4,
+        .bg-mist-5 {
             position: fixed;
             inset: -50%;
             pointer-events: none;
             z-index: 0;
-            filter: blur(80px);
+            filter: blur(85px);
             will-change: transform;
+            mix-blend-mode: screen;
         }
 
         .bg-mist-1 {
-            opacity: 0.75;
+            opacity: 0.7;
             background:
-                radial-gradient(circle 500px at 30% 40%, rgba(139, 92, 246, 0.55), transparent 70%),
-                radial-gradient(circle 620px at 72% 60%, rgba(120, 70, 200, 0.45), transparent 70%);
+                radial-gradient(circle 520px at 30% 40%, rgba(139, 92, 246, 0.6), transparent 70%),
+                radial-gradient(circle 640px at 72% 60%, rgba(120, 70, 200, 0.5), transparent 70%);
             animation: mistDrift1 45s ease-in-out infinite;
         }
 
         .bg-mist-2 {
             opacity: 0.65;
             background:
-                radial-gradient(circle 420px at 62% 28%, rgba(88, 40, 160, 0.55), transparent 70%),
-                radial-gradient(circle 560px at 18% 72%, rgba(167, 139, 250, 0.40), transparent 70%);
+                radial-gradient(circle 460px at 65% 25%, rgba(59, 130, 246, 0.55), transparent 70%),
+                radial-gradient(circle 580px at 20% 70%, rgba(37, 99, 235, 0.45), transparent 70%);
             animation: mistDrift2 60s ease-in-out infinite;
         }
 
         .bg-mist-3 {
+            opacity: 0.5;
+            background:
+                radial-gradient(circle 400px at 80% 50%, rgba(56, 189, 248, 0.5), transparent 70%),
+                radial-gradient(circle 500px at 38% 88%, rgba(14, 165, 233, 0.4), transparent 70%);
+            animation: mistDrift3 75s ease-in-out infinite;
+        }
+
+        .bg-mist-4 {
             opacity: 0.55;
             background:
-                radial-gradient(circle 360px at 82% 48%, rgba(139, 92, 246, 0.40), transparent 70%),
-                radial-gradient(circle 480px at 40% 88%, rgba(88, 40, 160, 0.45), transparent 70%);
-            animation: mistDrift3 75s ease-in-out infinite;
+                radial-gradient(circle 440px at 45% 55%, rgba(99, 102, 241, 0.5), transparent 70%),
+                radial-gradient(circle 520px at 85% 20%, rgba(79, 70, 229, 0.4), transparent 70%);
+            animation: mistDrift4 55s ease-in-out infinite;
+        }
+
+        .bg-mist-5 {
+            opacity: 0.4;
+            background:
+                radial-gradient(circle 380px at 15% 35%, rgba(192, 132, 252, 0.45), transparent 70%),
+                radial-gradient(circle 420px at 60% 80%, rgba(168, 85, 247, 0.4), transparent 70%);
+            animation: mistDrift5 68s ease-in-out infinite;
         }
 
         @keyframes twinkle1 {
@@ -161,6 +220,22 @@
             100% { transform: translate(0, 0) rotate(0deg) scale(1); }
         }
 
+        @keyframes mistDrift4 {
+            0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
+            22%  { transform: translate(-5%, 7%) rotate(-4deg) scale(1.12); }
+            48%  { transform: translate(7%, -3%) rotate(5deg) scale(0.95); }
+            74%  { transform: translate(-3%, 5%) rotate(-6deg) scale(1.1); }
+            100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+        }
+
+        @keyframes mistDrift5 {
+            0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
+            28%  { transform: translate(6%, 5%) rotate(6deg) scale(1.15); }
+            52%  { transform: translate(-5%, -4%) rotate(-4deg) scale(0.93); }
+            78%  { transform: translate(4%, -6%) rotate(5deg) scale(1.08); }
+            100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+        }
+
         /* ===== Контент поверх фона ===== */
         .header, .item-grid, .modal-overlay { position: relative; z-index: 1; }
 
@@ -181,8 +256,7 @@
                 0 0 30px rgba(139, 92, 246, 0.35);
         }
 
-        h1::before,
-        h1::after {
+        h1::before, h1::after {
             content: '';
             display: inline-block;
             width: 40px;
@@ -263,6 +337,8 @@
         }
 
         /* ===== Модалка ===== */
+        /* ВАЖНО: visibility переключается дискретно через transition-delay,
+           чтобы браузер не пытался её плавно анимировать (это и вешало страницу) */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -275,12 +351,19 @@
             -webkit-backdrop-filter: blur(6px);
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.35s ease, visibility 0.35s ease;
+            pointer-events: none;
+            transition:
+                opacity 0.35s ease,
+                visibility 0s linear 0.35s;
         }
 
         .modal-overlay.active {
             opacity: 1;
             visibility: visible;
+            pointer-events: auto;
+            transition:
+                opacity 0.35s ease,
+                visibility 0s linear 0s;
         }
 
         .modal-frame {
@@ -298,6 +381,7 @@
                 0 0 45px rgba(0, 255, 65, 0.18),
                 0 22px 55px rgba(0, 0, 0, 0.7),
                 inset 0 -2px 5px rgba(0, 0, 0, 0.5);
+
             transform: translateY(80px);
             opacity: 0;
             transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
@@ -317,11 +401,12 @@
                 linear-gradient(180deg, rgba(0, 60, 20, 0.55), rgba(0, 20, 8, 0.85)),
                 repeating-linear-gradient(
                     0deg,
-                    rgba(0, 255, 65, 0.12) 0px,
-                    rgba(0, 255, 65, 0.12) 2px,
-                    transparent 2px,
-                    transparent 5px
+                    rgba(0, 255, 65, 0.10) 0px,
+                    rgba(0, 255, 65, 0.10) 1px,
+                    transparent 1px,
+                    transparent 6px
                 );
+            background-position: 0 0, 0 0;
             border: 1px solid rgba(0, 255, 65, 0.35);
             box-shadow:
                 inset 0 0 60px rgba(0, 255, 65, 0.12),
@@ -330,16 +415,37 @@
             overflow: hidden;
         }
 
+        .modal-overlay.active .modal-content {
+            animation:
+                scanlineDrift 12s linear infinite,
+                terminalIdleFlicker 10s ease-in-out infinite 0.8s;
+        }
+
         .modal-content::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 40px;
-            background: linear-gradient(180deg, rgba(0, 255, 65, 0.15), transparent);
+            background: linear-gradient(180deg, rgba(0, 255, 65, 0.1), transparent);
             pointer-events: none;
+            z-index: 2;
         }
 
-        /* ===== Тексты со свечением ===== */
+        @keyframes scanlineDrift {
+            0%   { background-position: 0 0, 0 0; }
+            100% { background-position: 0 0, 0 60px; }  /* 10 шагов × 6px */
+        }
+
+        @keyframes terminalIdleFlicker {
+            0%    { filter: brightness(1); }
+            91%   { filter: brightness(1); }
+            92%   { filter: brightness(1.07); }
+            93%   { filter: brightness(0.95); }
+            94%   { filter: brightness(1.05); }
+            95%   { filter: brightness(0.99); }
+            96%   { filter: brightness(1.02); }
+            97%, 100% { filter: brightness(1); }
+        }
 
         .modal-id {
             position: absolute;
@@ -350,6 +456,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             text-shadow: 0 0 4px rgba(74, 222, 128, 0.45);
+            z-index: 3;
         }
 
         .modal-content h2 {
@@ -362,6 +469,8 @@
             text-shadow:
                 0 0 6px rgba(134, 239, 172, 0.55),
                 0 0 14px rgba(134, 239, 172, 0.25);
+            position: relative;
+            z-index: 3;
         }
 
         .modal-icon {
@@ -375,6 +484,8 @@
             box-shadow:
                 inset 0 0 0 1px rgba(0, 255, 65, 0.5),
                 0 0 20px rgba(0, 255, 65, 0.4);
+            position: relative;
+            z-index: 3;
         }
 
         .modal-desc {
@@ -389,9 +500,10 @@
             text-shadow: 0 0 3px rgba(134, 239, 172, 0.25);
             white-space: pre-wrap;
             cursor: pointer;
+            position: relative;
+            z-index: 3;
         }
 
-        /* Мигающий курсор в конце печати */
         .cursor {
             display: inline-block;
             color: #86efac;
@@ -418,6 +530,7 @@
             font-family: inherit;
             text-shadow: 0 0 4px rgba(74, 222, 128, 0.4);
             transition: color 0.2s, text-shadow 0.2s;
+            z-index: 4;
         }
 
         .close-btn:hover {
@@ -438,10 +551,12 @@
 
         #count {
             color: #8b7aa8;
-            margin: 18px 0 25px;
+            margin: 22px 0;
             font-size: 14px;
             letter-spacing: 3px;
             text-transform: uppercase;
+            line-height: 1;
+            padding-left: 3px;
         }
 
         @media (max-width: 500px) {
@@ -450,23 +565,49 @@
             .modal-content { padding: 24px 20px; }
             .modal-content h2 { margin: 0 40px 18px 40px; font-size: 18px; letter-spacing: 2px; }
         }
+
+        /* ===== Подпись под сеткой ===== */
+        .footer {
+            text-align: center;
+            margin: 26px auto 0;
+            padding: 0 10px 30px;
+            color: #7c6ba0;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.8;
+            text-shadow: 0 0 6px rgba(139, 92, 246, 0.35);
+            opacity: 0.85;
+        }
+
+        .footer .accent {
+            color: #a78bfa;
+            text-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
+        }
     </style>
 </head>
 <body>
 
     <div class="bg-stars-1"></div>
     <div class="bg-stars-2"></div>
+    <div class="bg-stars-3"></div>
     <div class="bg-mist-1"></div>
     <div class="bg-mist-2"></div>
     <div class="bg-mist-3"></div>
+    <div class="bg-mist-4"></div>
+    <div class="bg-mist-5"></div>
 
     <div class="header">
         <h1>Предметы</h1>
-        <input type="text" id="search" placeholder="Поиск по названию, описанию...">
+        <input type="text" id="search" placeholder="Поиск по названию, описанию или ID...">
         <div id="count" class="count-display"></div>
     </div>
 
     <div id="grid" class="item-grid"></div>
+    <div class="footer">
+        Сайт с предметами из игры <span class="accent">Unexplored</span> от <span class="accent">Shrimp</span>.<br>
+        Навайбкодено при помощи <span class="accent">DeepSeek</span>
+    </div>
 
     <div id="modal-overlay" class="modal-overlay">
         <div class="modal-frame">
@@ -761,11 +902,28 @@
         const tileSize = 21;
         const columns = 20;
 
-        // Состояние печати
+        // ===== Все таймеры и защита от повторных срабатываний =====
         let typewriterTimer = null;
+        let openStartTimer = null;
+        let closeCleanupTimer = null;
+
         let typewriterFullText = '';
         let typewriterElement = null;
         let typewriterIndex = 0;
+
+        // Throttle: игнорируем повторные клики по иконкам в течение 80 мс
+        let lastOpenTime = 0;
+        const OPEN_THROTTLE_MS = 80;
+
+        // Кеш высот описаний — чтобы не дёргать reflow на каждый клик
+        const heightCache = new Map();
+        let heightCacheWidth = window.innerWidth;
+
+        function cancelAllTimers() {
+            if (typewriterTimer) { clearInterval(typewriterTimer); typewriterTimer = null; }
+            if (openStartTimer)  { clearTimeout(openStartTimer);  openStartTimer = null; }
+            if (closeCleanupTimer) { clearTimeout(closeCleanupTimer); closeCleanupTimer = null; }
+        }
 
         function getSpritePosition(id) {
             const index = id - 1;
@@ -787,18 +945,14 @@
                 const icon = document.createElement('div');
                 icon.className = 'item-icon';
                 icon.style.backgroundPosition = getSpritePosition(item.id);
-                icon.title = item.name;
+                icon.title = `#${item.id} — ${item.name}`;
                 icon.onclick = () => openModal(item);
                 grid.appendChild(icon);
             });
         }
 
-        // Анимация печати текста с мигающим курсором (8 мс — быстрее)
         function typewrite(element, text, speed = 8) {
-            if (typewriterTimer) {
-                clearInterval(typewriterTimer);
-                typewriterTimer = null;
-            }
+            if (typewriterTimer) { clearInterval(typewriterTimer); typewriterTimer = null; }
             element.innerHTML = '';
 
             typewriterFullText = text;
@@ -821,7 +975,6 @@
             }, speed);
         }
 
-        // Пропустить анимацию — дорисовать текст мгновенно
         function skipTypewriter() {
             if (!typewriterTimer || !typewriterElement) return;
             clearInterval(typewriterTimer);
@@ -837,7 +990,45 @@
             typewriterIndex = typewriterFullText.length;
         }
 
+        function measureDescriptionHeight(text) {
+            const prevVisibility = modalDesc.style.visibility;
+            const prevText = modalDesc.textContent;
+            const prevMinHeight = modalDesc.style.minHeight;
+
+            modalDesc.style.visibility = 'hidden';
+            modalDesc.style.minHeight = '0';
+            modalDesc.textContent = text;
+            const h = modalDesc.offsetHeight;
+
+            modalDesc.textContent = prevText;
+            modalDesc.style.minHeight = prevMinHeight;
+            modalDesc.style.visibility = prevVisibility;
+            return h;
+        }
+
+        function getDescriptionHeight(item) {
+            // Если ширина окна изменилась — сбрасываем кеш
+            if (window.innerWidth !== heightCacheWidth) {
+                heightCache.clear();
+                heightCacheWidth = window.innerWidth;
+            }
+            if (heightCache.has(item.id)) return heightCache.get(item.id);
+
+            const h = measureDescriptionHeight(item.desc);
+            heightCache.set(item.id, h);
+            return h;
+        }
+
         function openModal(item) {
+            // Защита от быстрых повторных кликов
+            const now = performance.now();
+            if (now - lastOpenTime < OPEN_THROTTLE_MS) return;
+            lastOpenTime = now;
+
+            cancelAllTimers();
+
+            const wasOpen = modal.classList.contains('active');
+
             modalName.textContent = item.name;
             modalId.textContent = `ID: ${item.id}`;
 
@@ -851,20 +1042,33 @@
             const totalRows = Math.ceil(items.length / columns);
             modalIcon.style.backgroundSize = `${columns * tileSize * modalScale}px ${totalRows * tileSize * modalScale}px`;
 
-            modal.classList.add('active');
+            const targetHeight = getDescriptionHeight(item);
+            modalDesc.style.minHeight = targetHeight + 'px';
+            modalDesc.innerHTML = '';
 
-            setTimeout(() => {
+            // Показываем окно только если оно закрыто — иначе просто меняем содержимое
+            if (!wasOpen) {
+                modal.classList.add('active');
+            }
+
+            openStartTimer = setTimeout(() => {
+                openStartTimer = null;
                 typewrite(modalDesc, item.desc, 8);
-            }, 280);
+            }, 100);
         }
 
         function closeModal() {
+            cancelAllTimers();
+
+            if (!modal.classList.contains('active')) return;
+
             modal.classList.remove('active');
-            if (typewriterTimer) {
-                clearInterval(typewriterTimer);
-                typewriterTimer = null;
-            }
-            setTimeout(() => { modalDesc.innerHTML = ''; }, 350);
+
+            closeCleanupTimer = setTimeout(() => {
+                closeCleanupTimer = null;
+                modalDesc.innerHTML = '';
+                modalDesc.style.minHeight = '';
+            }, 400);
         }
 
         modal.addEventListener('click', (e) => {
@@ -872,14 +1076,20 @@
         });
         closeModalBtn.addEventListener('click', closeModal);
 
-        // Клик по описанию — пропустить анимацию печати
         modalDesc.addEventListener('click', skipTypewriter);
 
         function filterItems(query) {
-            const lowerQuery = query.toLowerCase();
+            const trimmed = query.trim();
+            if (!trimmed) return items;
+
+            const lowerQuery = trimmed.toLowerCase();
+            const numericQuery = /^\d+$/.test(trimmed) ? parseInt(trimmed, 10) : null;
+
             return items.filter(item => {
-                return item.name.toLowerCase().includes(lowerQuery) ||
-                       item.desc.toLowerCase().includes(lowerQuery);
+                const nameMatch = item.name.toLowerCase().includes(lowerQuery);
+                const descMatch = item.desc.toLowerCase().includes(lowerQuery);
+                const idMatch = numericQuery !== null && item.id === numericQuery;
+                return nameMatch || descMatch || idMatch;
             });
         }
 
