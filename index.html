@@ -24,14 +24,8 @@
         }
 
         /* ===== Фоновые слои ===== */
-        .bg-stars-1,
-        .bg-stars-2,
-        .bg-stars-3,
-        .bg-mist-1,
-        .bg-mist-2,
-        .bg-mist-3,
-        .bg-mist-4,
-        .bg-mist-5 {
+        .bg-stars-1, .bg-stars-2, .bg-stars-3,
+        .bg-mist-1, .bg-mist-2, .bg-mist-3, .bg-mist-4, .bg-mist-5 {
             position: fixed;
             inset: 0;
             pointer-events: none;
@@ -40,102 +34,45 @@
 
         .bg-stars-1 {
             background-image:
-                radial-gradient(1px 1px at 3% 12%, #ffffff, transparent),
-                radial-gradient(1px 1px at 8% 34%, #e9d5ff, transparent),
-                radial-gradient(1px 1px at 13% 7%, #ffffff, transparent),
-                radial-gradient(1.5px 1.5px at 18% 56%, #ffffff, transparent),
-                radial-gradient(1px 1px at 23% 22%, #c4b5fd, transparent),
-                radial-gradient(1px 1px at 28% 78%, #ffffff, transparent),
-                radial-gradient(1px 1px at 33% 41%, #bae6fd, transparent),
-                radial-gradient(1.5px 1.5px at 38% 15%, #ffffff, transparent),
-                radial-gradient(1px 1px at 43% 68%, #ffffff, transparent),
-                radial-gradient(1px 1px at 48% 29%, #c4b5fd, transparent),
-                radial-gradient(1px 1px at 53% 84%, #ffffff, transparent),
-                radial-gradient(1.5px 1.5px at 58% 47%, #bae6fd, transparent),
-                radial-gradient(1px 1px at 63% 18%, #ffffff, transparent),
-                radial-gradient(1px 1px at 68% 62%, #ffffff, transparent),
-                radial-gradient(1px 1px at 73% 88%, #c4b5fd, transparent),
-                radial-gradient(1px 1px at 78% 92%, #ffffff, transparent),
-                radial-gradient(1px 1px at 83% 6%, #ffffff, transparent),
-                radial-gradient(1px 1px at 88% 95%, #bae6fd, transparent),
-                radial-gradient(1px 1px at 93% 62%, #ffffff, transparent),
-                radial-gradient(1px 1px at 97% 38%, #e9d5ff, transparent),
-                radial-gradient(1px 1px at 2% 62%, #ffffff, transparent),
-                radial-gradient(1px 1px at 14% 47%, #bae6fd, transparent),
-                radial-gradient(1px 1px at 27% 82%, #ffffff, transparent),
-                radial-gradient(1.5px 1.5px at 35% 5%, #ffffff, transparent),
-                radial-gradient(1px 1px at 43% 25%, #c4b5fd, transparent),
-                radial-gradient(1px 1px at 57% 51%, #ffffff, transparent),
-                radial-gradient(1px 1px at 64% 88%, #bae6fd, transparent),
-                radial-gradient(1px 1px at 79% 10%, #ffffff, transparent),
-                radial-gradient(1.5px 1.5px at 85% 68%, #ffffff, transparent),
-                radial-gradient(1px 1px at 91% 40%, #c4b5fd, transparent),
-                radial-gradient(1px 1px at 6% 25%, #ffffff, transparent),
-                radial-gradient(1px 1px at 17% 72%, #e9d5ff, transparent),
-                radial-gradient(1px 1px at 31% 47%, #ffffff, transparent),
-                radial-gradient(1px 1px at 46% 8%, #bae6fd, transparent),
-                radial-gradient(1px 1px at 61% 35%, #ffffff, transparent),
-                radial-gradient(1px 1px at 76% 62%, #c4b5fd, transparent),
-                radial-gradient(1px 1px at 88% 5%, #ffffff, transparent),
-                radial-gradient(1px 1px at 96% 82%, #e9d5ff, transparent);
+                radial-gradient(1px 1px at 3% 12%, #ffffff, transparent), radial-gradient(1px 1px at 8% 34%, #e9d5ff, transparent),
+                radial-gradient(1px 1px at 13% 7%, #ffffff, transparent), radial-gradient(1.5px 1.5px at 18% 56%, #ffffff, transparent),
+                radial-gradient(1px 1px at 23% 22%, #c4b5fd, transparent), radial-gradient(1px 1px at 28% 78%, #ffffff, transparent),
+                radial-gradient(1px 1px at 33% 41%, #bae6fd, transparent), radial-gradient(1.5px 1.5px at 38% 15%, #ffffff, transparent),
+                radial-gradient(1px 1px at 43% 68%, #ffffff, transparent), radial-gradient(1px 1px at 48% 29%, #c4b5fd, transparent),
+                radial-gradient(1px 1px at 53% 84%, #ffffff, transparent), radial-gradient(1.5px 1.5px at 58% 47%, #bae6fd, transparent),
+                radial-gradient(1px 1px at 63% 18%, #ffffff, transparent), radial-gradient(1px 1px at 68% 62%, #ffffff, transparent),
+                radial-gradient(1px 1px at 73% 88%, #c4b5fd, transparent), radial-gradient(1px 1px at 78% 92%, #ffffff, transparent),
+                radial-gradient(1px 1px at 83% 6%, #ffffff, transparent), radial-gradient(1px 1px at 88% 95%, #bae6fd, transparent),
+                radial-gradient(1px 1px at 93% 62%, #ffffff, transparent), radial-gradient(1px 1px at 97% 38%, #e9d5ff, transparent),
+                radial-gradient(1px 1px at 2% 62%, #ffffff, transparent), radial-gradient(1px 1px at 14% 47%, #bae6fd, transparent),
+                radial-gradient(1px 1px at 27% 82%, #ffffff, transparent), radial-gradient(1.5px 1.5px at 35% 5%, #ffffff, transparent),
+                radial-gradient(1px 1px at 43% 25%, #c4b5fd, transparent), radial-gradient(1px 1px at 57% 51%, #ffffff, transparent),
+                radial-gradient(1px 1px at 64% 88%, #bae6fd, transparent), radial-gradient(1px 1px at 79% 10%, #ffffff, transparent),
+                radial-gradient(1.5px 1.5px at 85% 68%, #ffffff, transparent), radial-gradient(1px 1px at 91% 40%, #c4b5fd, transparent);
             animation: twinkle1 3s ease-in-out infinite;
         }
 
         .bg-stars-2 {
             background-image:
-                radial-gradient(2px 2px at 5% 20%, #ffffff, transparent),
-                radial-gradient(2px 2px at 15% 62%, #e9d5ff, transparent),
-                radial-gradient(2px 2px at 25% 8%, #ffffff, transparent),
-                radial-gradient(2px 2px at 35% 55%, #bae6fd, transparent),
-                radial-gradient(2px 2px at 45% 33%, #ffffff, transparent),
-                radial-gradient(2px 2px at 55% 88%, #ffffff, transparent),
-                radial-gradient(2px 2px at 65% 42%, #e9d5ff, transparent),
-                radial-gradient(2px 2px at 75% 74%, #ffffff, transparent),
-                radial-gradient(2px 2px at 85% 25%, #bae6fd, transparent),
-                radial-gradient(2px 2px at 95% 55%, #ffffff, transparent),
-                radial-gradient(2px 2px at 10% 85%, #ffffff, transparent),
-                radial-gradient(2px 2px at 22% 45%, #e9d5ff, transparent),
-                radial-gradient(2px 2px at 39% 18%, #ffffff, transparent),
-                radial-gradient(2px 2px at 56% 78%, #bae6fd, transparent),
-                radial-gradient(2px 2px at 68% 6%, #ffffff, transparent),
-                radial-gradient(2px 2px at 82% 88%, #e9d5ff, transparent),
-                radial-gradient(2px 2px at 92% 22%, #ffffff, transparent),
-                radial-gradient(2px 2px at 3% 78%, #ffffff, transparent),
-                radial-gradient(2px 2px at 29% 92%, #bae6fd, transparent),
-                radial-gradient(2px 2px at 49% 5%, #ffffff, transparent);
+                radial-gradient(2px 2px at 5% 20%, #ffffff, transparent), radial-gradient(2px 2px at 15% 62%, #e9d5ff, transparent),
+                radial-gradient(2px 2px at 25% 8%, #ffffff, transparent), radial-gradient(2px 2px at 35% 55%, #bae6fd, transparent),
+                radial-gradient(2px 2px at 45% 33%, #ffffff, transparent), radial-gradient(2px 2px at 55% 88%, #ffffff, transparent),
+                radial-gradient(2px 2px at 65% 42%, #e9d5ff, transparent), radial-gradient(2px 2px at 75% 74%, #ffffff, transparent),
+                radial-gradient(2px 2px at 85% 25%, #bae6fd, transparent), radial-gradient(2px 2px at 95% 55%, #ffffff, transparent);
             animation: twinkle2 4.5s ease-in-out infinite 0.8s;
         }
 
         .bg-stars-3 {
             background-image:
-                radial-gradient(0.8px 0.8px at 7% 15%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 12% 45%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 19% 78%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 26% 30%, #c4b5fd, transparent),
-                radial-gradient(0.8px 0.8px at 32% 62%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 41% 88%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 48% 12%, #bae6fd, transparent),
-                radial-gradient(0.8px 0.8px at 55% 45%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 62% 75%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 71% 25%, #c4b5fd, transparent),
-                radial-gradient(0.8px 0.8px at 77% 55%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 84% 18%, #bae6fd, transparent),
-                radial-gradient(0.8px 0.8px at 91% 82%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 4% 55%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 21% 5%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 37% 42%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 52% 92%, #c4b5fd, transparent),
-                radial-gradient(0.8px 0.8px at 69% 8%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 87% 42%, #ffffff, transparent),
-                radial-gradient(0.8px 0.8px at 98% 12%, #bae6fd, transparent);
+                radial-gradient(0.8px 0.8px at 7% 15%, #ffffff, transparent), radial-gradient(0.8px 0.8px at 12% 45%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 19% 78%, #ffffff, transparent), radial-gradient(0.8px 0.8px at 26% 30%, #c4b5fd, transparent),
+                radial-gradient(0.8px 0.8px at 32% 62%, #ffffff, transparent), radial-gradient(0.8px 0.8px at 41% 88%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 48% 12%, #bae6fd, transparent), radial-gradient(0.8px 0.8px at 55% 45%, #ffffff, transparent),
+                radial-gradient(0.8px 0.8px at 62% 75%, #ffffff, transparent), radial-gradient(0.8px 0.8px at 71% 25%, #c4b5fd, transparent);
             animation: twinkle1 2.2s ease-in-out infinite 0.5s;
         }
 
-        .bg-mist-1,
-        .bg-mist-2,
-        .bg-mist-3,
-        .bg-mist-4,
-        .bg-mist-5 {
+        .bg-mist-1, .bg-mist-2, .bg-mist-3, .bg-mist-4, .bg-mist-5 {
             position: fixed;
             inset: -50%;
             pointer-events: none;
@@ -145,99 +82,23 @@
             mix-blend-mode: screen;
         }
 
-        .bg-mist-1 {
-            opacity: 0.7;
-            background:
-                radial-gradient(circle 520px at 30% 40%, rgba(139, 92, 246, 0.6), transparent 70%),
-                radial-gradient(circle 640px at 72% 60%, rgba(120, 70, 200, 0.5), transparent 70%);
-            animation: mistDrift1 45s ease-in-out infinite;
-        }
+        .bg-mist-1 { opacity: 0.7; background: radial-gradient(circle 520px at 30% 40%, rgba(139, 92, 246, 0.6), transparent 70%), radial-gradient(circle 640px at 72% 60%, rgba(120, 70, 200, 0.5), transparent 70%); animation: mistDrift1 45s ease-in-out infinite; }
+        .bg-mist-2 { opacity: 0.65; background: radial-gradient(circle 460px at 65% 25%, rgba(59, 130, 246, 0.55), transparent 70%), radial-gradient(circle 580px at 20% 70%, rgba(37, 99, 235, 0.45), transparent 70%); animation: mistDrift2 60s ease-in-out infinite; }
+        .bg-mist-3 { opacity: 0.5; background: radial-gradient(circle 400px at 80% 50%, rgba(56, 189, 248, 0.5), transparent 70%), radial-gradient(circle 500px at 38% 88%, rgba(14, 165, 233, 0.4), transparent 70%); animation: mistDrift3 75s ease-in-out infinite; }
+        .bg-mist-4 { opacity: 0.55; background: radial-gradient(circle 440px at 45% 55%, rgba(99, 102, 241, 0.5), transparent 70%), radial-gradient(circle 520px at 85% 20%, rgba(79, 70, 229, 0.4), transparent 70%); animation: mistDrift4 55s ease-in-out infinite; }
+        .bg-mist-5 { opacity: 0.4; background: radial-gradient(circle 380px at 15% 35%, rgba(192, 132, 252, 0.45), transparent 70%), radial-gradient(circle 420px at 60% 80%, rgba(168, 85, 247, 0.4), transparent 70%); animation: mistDrift5 68s ease-in-out infinite; }
 
-        .bg-mist-2 {
-            opacity: 0.65;
-            background:
-                radial-gradient(circle 460px at 65% 25%, rgba(59, 130, 246, 0.55), transparent 70%),
-                radial-gradient(circle 580px at 20% 70%, rgba(37, 99, 235, 0.45), transparent 70%);
-            animation: mistDrift2 60s ease-in-out infinite;
-        }
+        @keyframes twinkle1 { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+        @keyframes twinkle2 { 0%, 100% { opacity: 1; } 50% { opacity: 0.1; } }
 
-        .bg-mist-3 {
-            opacity: 0.5;
-            background:
-                radial-gradient(circle 400px at 80% 50%, rgba(56, 189, 248, 0.5), transparent 70%),
-                radial-gradient(circle 500px at 38% 88%, rgba(14, 165, 233, 0.4), transparent 70%);
-            animation: mistDrift3 75s ease-in-out infinite;
-        }
+        @keyframes mistDrift1 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); } 20% { transform: translate(6%, -4%) rotate(4deg) scale(1.10); } 40% { transform: translate(-4%, 5%) rotate(-3deg) scale(0.94); } 60% { transform: translate(5%, 6%) rotate(6deg) scale(1.12); } 80% { transform: translate(-6%, -3%) rotate(-4deg) scale(1.02); } 100% { transform: translate(0, 0) rotate(0deg) scale(1); } }
+        @keyframes mistDrift2 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); } 25% { transform: translate(-7%, 4%) rotate(-5deg) scale(1.14); } 50% { transform: translate(4%, -6%) rotate(3deg) scale(0.92); } 75% { transform: translate(-5%, -5%) rotate(7deg) scale(1.08); } 100% { transform: translate(0, 0) rotate(0deg) scale(1); } }
+        @keyframes mistDrift3 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); } 30% { transform: translate(8%, 3%) rotate(5deg) scale(1.16); } 55% { transform: translate(-3%, -7%) rotate(-6deg) scale(0.90); } 80% { transform: translate(3%, 6%) rotate(4deg) scale(1.06); } 100% { transform: translate(0, 0) rotate(0deg) scale(1); } }
+        @keyframes mistDrift4 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); } 22% { transform: translate(-5%, 7%) rotate(-4deg) scale(1.12); } 48% { transform: translate(7%, -3%) rotate(5deg) scale(0.95); } 74% { transform: translate(-3%, 5%) rotate(-6deg) scale(1.1); } 100% { transform: translate(0, 0) rotate(0deg) scale(1); } }
+        @keyframes mistDrift5 { 0% { transform: translate(0, 0) rotate(0deg) scale(1); } 28% { transform: translate(6%, 5%) rotate(6deg) scale(1.15); } 52% { transform: translate(-5%, -4%) rotate(-4deg) scale(0.93); } 78% { transform: translate(4%, -6%) rotate(5deg) scale(1.08); } 100% { transform: translate(0, 0) rotate(0deg) scale(1); } }
 
-        .bg-mist-4 {
-            opacity: 0.55;
-            background:
-                radial-gradient(circle 440px at 45% 55%, rgba(99, 102, 241, 0.5), transparent 70%),
-                radial-gradient(circle 520px at 85% 20%, rgba(79, 70, 229, 0.4), transparent 70%);
-            animation: mistDrift4 55s ease-in-out infinite;
-        }
-
-        .bg-mist-5 {
-            opacity: 0.4;
-            background:
-                radial-gradient(circle 380px at 15% 35%, rgba(192, 132, 252, 0.45), transparent 70%),
-                radial-gradient(circle 420px at 60% 80%, rgba(168, 85, 247, 0.4), transparent 70%);
-            animation: mistDrift5 68s ease-in-out infinite;
-        }
-
-        @keyframes twinkle1 {
-            0%, 100% { opacity: 0.25; }
-            50%      { opacity: 1;    }
-        }
-
-        @keyframes twinkle2 {
-            0%, 100% { opacity: 1;    }
-            50%      { opacity: 0.1;  }
-        }
-
-        @keyframes mistDrift1 {
-            0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
-            20%  { transform: translate(6%, -4%) rotate(4deg) scale(1.10); }
-            40%  { transform: translate(-4%, 5%) rotate(-3deg) scale(0.94); }
-            60%  { transform: translate(5%, 6%) rotate(6deg) scale(1.12); }
-            80%  { transform: translate(-6%, -3%) rotate(-4deg) scale(1.02); }
-            100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-        }
-
-        @keyframes mistDrift2 {
-            0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
-            25%  { transform: translate(-7%, 4%) rotate(-5deg) scale(1.14); }
-            50%  { transform: translate(4%, -6%) rotate(3deg) scale(0.92); }
-            75%  { transform: translate(-5%, -5%) rotate(7deg) scale(1.08); }
-            100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-        }
-
-        @keyframes mistDrift3 {
-            0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
-            30%  { transform: translate(8%, 3%) rotate(5deg) scale(1.16); }
-            55%  { transform: translate(-3%, -7%) rotate(-6deg) scale(0.90); }
-            80%  { transform: translate(3%, 6%) rotate(4deg) scale(1.06); }
-            100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-        }
-
-        @keyframes mistDrift4 {
-            0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
-            22%  { transform: translate(-5%, 7%) rotate(-4deg) scale(1.12); }
-            48%  { transform: translate(7%, -3%) rotate(5deg) scale(0.95); }
-            74%  { transform: translate(-3%, 5%) rotate(-6deg) scale(1.1); }
-            100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-        }
-
-        @keyframes mistDrift5 {
-            0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
-            28%  { transform: translate(6%, 5%) rotate(6deg) scale(1.15); }
-            52%  { transform: translate(-5%, -4%) rotate(-4deg) scale(0.93); }
-            78%  { transform: translate(4%, -6%) rotate(5deg) scale(1.08); }
-            100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-        }
-
-        /* ===== Контент поверх фона ===== */
-        .header, .item-grid, .modal-overlay { position: relative; z-index: 1; }
+        /* ===== Общие стили ===== */
+        .header, .view-container, .modal-overlay { position: relative; z-index: 1; }
 
         .header {
             text-align: center;
@@ -251,9 +112,7 @@
             font-weight: 400;
             margin: 0 0 28px 0;
             text-transform: uppercase;
-            text-shadow:
-                0 0 12px rgba(167, 139, 250, 0.6),
-                0 0 30px rgba(139, 92, 246, 0.35);
+            text-shadow: 0 0 12px rgba(167, 139, 250, 0.6), 0 0 30px rgba(139, 92, 246, 0.35);
         }
 
         h1::before, h1::after {
@@ -266,323 +125,142 @@
             margin: 0 20px;
         }
 
-        #search {
-            width: 90%;
-            max-width: 640px;
-            padding: 14px 22px;
-            font-family: inherit;
-            font-size: 16px;
-            letter-spacing: 2px;
-            color: #e9d5ff;
+        .nav-btn {
             background: rgba(20, 10, 40, 0.7);
+            color: #e9d5ff;
             border: 1px solid rgba(167, 139, 250, 0.4);
-            border-radius: 2px;
-            outline: none;
-            transition: all 0.25s ease;
-            text-transform: uppercase;
-        }
-
-        #search:focus {
-            border-color: #a78bfa;
-            box-shadow: 0 0 15px rgba(167, 139, 250, 0.4), inset 0 0 10px rgba(167, 139, 250, 0.1);
-            background: rgba(30, 15, 55, 0.85);
-        }
-
-        #search::placeholder {
-            color: #6b5b8c;
+            padding: 10px 20px;
+            font-family: inherit;
+            font-size: 14px;
             letter-spacing: 2px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+            margin-bottom: 20px;
         }
+        .nav-btn:hover { border-color: #a78bfa; box-shadow: 0 0 15px rgba(167, 139, 250, 0.4); background: rgba(30, 15, 55, 0.85); }
+        .nav-btn.active { background: #a78bfa; color: #070511; border-color: #a78bfa; }
+
+        /* ===== Каталог ===== */
+        #catalog-view { display: block; }
+        #search {
+            width: 90%; max-width: 640px; padding: 14px 22px; font-family: inherit; font-size: 16px;
+            letter-spacing: 2px; color: #e9d5ff; background: rgba(20, 10, 40, 0.7);
+            border: 1px solid rgba(167, 139, 250, 0.4); border-radius: 2px; outline: none;
+            transition: all 0.25s ease; text-transform: uppercase;
+        }
+        #search:focus { border-color: #a78bfa; box-shadow: 0 0 15px rgba(167, 139, 250, 0.4), inset 0 0 10px rgba(167, 139, 250, 0.1); background: rgba(30, 15, 55, 0.85); }
+        #search::placeholder { color: #6b5b8c; letter-spacing: 2px; }
 
         .item-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-            gap: 10px;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 22px;
-            border-radius: 6px;
-            background: rgba(12, 6, 24, 0.35);
-            backdrop-filter: blur(14px) saturate(120%);
-            -webkit-backdrop-filter: blur(14px) saturate(120%);
-            border: 1px solid rgba(167, 139, 250, 0.18);
-            box-shadow:
-                0 0 40px rgba(88, 40, 160, 0.15),
-                inset 0 0 60px rgba(88, 40, 160, 0.08);
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 10px;
+            max-width: 1400px; margin: 0 auto; padding: 22px; border-radius: 6px;
+            background: rgba(12, 6, 24, 0.35); backdrop-filter: blur(14px) saturate(120%);
+            -webkit-backdrop-filter: blur(14px) saturate(120%); border: 1px solid rgba(167, 139, 250, 0.18);
+            box-shadow: 0 0 40px rgba(88, 40, 160, 0.15), inset 0 0 60px rgba(88, 40, 160, 0.08);
         }
 
         .item-icon {
-            width: 63px;
-            height: 63px;
-            background-image: url('tilesheet.png');
-            background-repeat: no-repeat;
-            image-rendering: pixelated;
-            image-rendering: crisp-edges;
-            border-radius: 4px;
-            cursor: pointer;
-            background-color: rgba(18, 8, 36, 0.45);
-            box-shadow:
-                inset 0 0 0 1px rgba(167, 139, 250, 0.15),
-                0 2px 6px rgba(0, 0, 0, 0.35);
-            background-size: 1260px 882px;
-            transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+            width: 63px; height: 63px; background-image: url('tilesheet.png'); background-repeat: no-repeat;
+            image-rendering: pixelated; image-rendering: crisp-edges; border-radius: 4px; cursor: pointer;
+            background-color: rgba(18, 8, 36, 0.45); box-shadow: inset 0 0 0 1px rgba(167, 139, 250, 0.15), 0 2px 6px rgba(0, 0, 0, 0.35);
+            background-size: 1260px 882px; transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
         }
+        .item-icon:hover { transform: scale(1.12); background-color: rgba(167, 139, 250, 0.15); box-shadow: inset 0 0 0 1px #a78bfa, 0 0 18px rgba(167, 139, 250, 0.6), 0 0 6px rgba(94, 234, 212, 0.3); }
+        .empty-state { grid-column: 1 / -1; text-align: center; color: #6b5b8c; padding: 90px 20px; font-size: 16px; letter-spacing: 3px; text-transform: uppercase; line-height: 2; }
+        #count { color: #8b7aa8; margin: 22px 0; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; line-height: 1; padding-left: 3px; }
 
-        .item-icon:hover {
-            transform: scale(1.12);
-            background-color: rgba(167, 139, 250, 0.15);
-            box-shadow:
-                inset 0 0 0 1px #a78bfa,
-                0 0 18px rgba(167, 139, 250, 0.6),
-                0 0 6px rgba(94, 234, 212, 0.3);
+        /* ===== Тир-лист ===== */
+        #tierlist-view { display: none; max-width: 1400px; margin: 0 auto; }
+        .tier-controls { display: flex; gap: 15px; margin-bottom: 20px; justify-content: center; flex-wrap: wrap; }
+        .tier-btn { background: rgba(20, 10, 40, 0.7); color: #e9d5ff; border: 1px solid rgba(167, 139, 250, 0.4); padding: 10px 20px; font-family: inherit; font-size: 14px; letter-spacing: 2px; cursor: pointer; text-transform: uppercase; transition: all 0.25s ease; }
+        .tier-btn:hover { border-color: #a78bfa; box-shadow: 0 0 15px rgba(167, 139, 250, 0.4); }
+        .tier-btn.danger { border-color: rgba(239, 68, 68, 0.5); color: #fca5a5; }
+        .tier-btn.danger:hover { border-color: #ef4444; box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); }
+        
+        #file-input { display: none; }
+
+        .tier-container { display: flex; flex-direction: column; gap: 5px; margin-bottom: 30px; }
+        .tier-row { display: flex; background: rgba(12, 6, 24, 0.6); border: 1px solid rgba(167, 139, 250, 0.2); border-radius: 4px; overflow: hidden; min-height: 70px; }
+        .tier-header { width: 80px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; color: #000; cursor: pointer; position: relative; text-transform: uppercase; flex-shrink: 0; }
+        .tier-header input[type="color"] { position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+        .tier-header span { position: relative; z-index: 1; text-shadow: 0 1px 2px rgba(255,255,255,0.3); }
+        .tier-items { flex-grow: 1; display: flex; flex-wrap: wrap; gap: 5px; padding: 5px; align-content: flex-start; min-height: 70px; transition: background 0.2s; }
+        .tier-items.drag-over { background: rgba(167, 139, 250, 0.1); box-shadow: inset 0 0 10px rgba(167, 139, 250, 0.2); }
+        
+        .delete-tier-btn { position: absolute; top: 2px; right: 2px; background: rgba(0,0,0,0.3); border: none; color: rgba(0,0,0,0.6); cursor: pointer; font-size: 12px; border-radius: 2px; z-index: 2; padding: 2px 5px; }
+        .delete-tier-btn:hover { color: #000; background: rgba(255,255,255,0.5); }
+
+        /* Иконка в тир-листе. Никаких border, чтобы не сжимать фон */
+        .tier-item {
+            box-sizing: border-box;
+            background-image: url('tilesheet.png'); 
+            background-repeat: no-repeat;
+            image-rendering: pixelated; 
+            image-rendering: crisp-edges; 
+            border-radius: 2px;
+            cursor: grab; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(0,0,0,0.5); /* Используем тень для рамки */
+            transition: transform 0.1s; 
+            position: relative;
+            /* Размеры и background-size задаются динамически в JS */
         }
+        .tier-item:active { cursor: grabbing; }
+        .tier-item:hover { transform: scale(1.1); z-index: 10; }
+
+        .unranked-section { background: rgba(12, 6, 24, 0.6); border: 1px solid rgba(167, 139, 250, 0.2); border-radius: 4px; padding: 15px; margin-bottom: 20px; }
+        .unranked-section h3 { margin: 0 0 15px 0; font-size: 16px; color: #a78bfa; text-transform: uppercase; letter-spacing: 2px; }
+        .unranked-container { display: flex; flex-wrap: wrap; gap: 5px; min-height: 100px; align-content: flex-start; padding: 5px; transition: background 0.2s; }
+        .unranked-container.drag-over { background: rgba(167, 139, 250, 0.1); box-shadow: inset 0 0 10px rgba(167, 139, 250, 0.2); }
 
         /* ===== Модалка ===== */
-        /* ВАЖНО: visibility переключается дискретно через transition-delay,
-           чтобы браузер не пытался её плавно анимировать (это и вешало страницу) */
         .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(5, 2, 15, 0.85);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 100;
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transition:
-                opacity 0.35s ease,
-                visibility 0s linear 0.35s;
+            position: fixed; inset: 0; background: rgba(5, 2, 15, 0.85); display: flex; align-items: center; justify-content: center;
+            z-index: 100; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); opacity: 0; visibility: hidden; pointer-events: none;
+            transition: opacity 0.35s ease, visibility 0s linear 0.35s;
         }
-
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-            transition:
-                opacity 0.35s ease,
-                visibility 0s linear 0s;
-        }
-
+        .modal-overlay.active { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.35s ease, visibility 0s linear 0s; }
         .modal-frame {
-            width: 90%;
-            max-width: 640px;
-            padding: 12px;
-            border-radius: 28px;
-            background:
-                radial-gradient(circle at 100% 0%, rgba(15, 20, 25, 0.95) 0%, rgba(15, 20, 25, 0.4) 20%, transparent 50%),
-                radial-gradient(circle at 0% 100%, rgba(15, 20, 25, 0.95) 0%, rgba(15, 20, 25, 0.4) 20%, transparent 50%),
-                radial-gradient(ellipse 60% 70% at 20% 15%, #d8dce2 0%, #b4b9c1 30%, transparent 65%),
-                linear-gradient(135deg, #b8bcc4 0%, #8f949c 40%, #6f7580 70%, #4e535b 100%);
-            border: 1px solid #2a2f36;
-            box-shadow:
-                0 0 45px rgba(0, 255, 65, 0.18),
-                0 22px 55px rgba(0, 0, 0, 0.7),
-                inset 0 -2px 5px rgba(0, 0, 0, 0.5);
-
-            transform: translateY(80px);
-            opacity: 0;
-            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
+            width: 90%; max-width: 640px; padding: 12px; border-radius: 28px;
+            background: radial-gradient(circle at 100% 0%, rgba(15, 20, 25, 0.95) 0%, rgba(15, 20, 25, 0.4) 20%, transparent 50%),
+                        radial-gradient(circle at 0% 100%, rgba(15, 20, 25, 0.95) 0%, rgba(15, 20, 25, 0.4) 20%, transparent 50%),
+                        radial-gradient(ellipse 60% 70% at 20% 15%, #d8dce2 0%, #b4b9c1 30%, transparent 65%),
+                        linear-gradient(135deg, #b8bcc4 0%, #8f949c 40%, #6f7580 70%, #4e535b 100%);
+            border: 1px solid #2a2f36; box-shadow: 0 0 45px rgba(0, 255, 65, 0.18), 0 22px 55px rgba(0, 0, 0, 0.7), inset 0 -2px 5px rgba(0, 0, 0, 0.5);
+            transform: translateY(80px); opacity: 0; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
         }
-
-        .modal-overlay.active .modal-frame {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
+        .modal-overlay.active .modal-frame { transform: translateY(0); opacity: 1; }
         .modal-content {
-            position: relative;
-            border-radius: 18px;
-            padding: 30px 34px;
-            background: #0d2412;
-            background-image:
-                linear-gradient(180deg, rgba(0, 60, 20, 0.55), rgba(0, 20, 8, 0.85)),
-                repeating-linear-gradient(
-                    0deg,
-                    rgba(0, 255, 65, 0.10) 0px,
-                    rgba(0, 255, 65, 0.10) 1px,
-                    transparent 1px,
-                    transparent 6px
-                );
-            background-position: 0 0, 0 0;
-            border: 1px solid rgba(0, 255, 65, 0.35);
-            box-shadow:
-                inset 0 0 60px rgba(0, 255, 65, 0.12),
-                inset 0 0 4px rgba(0, 255, 65, 0.5);
-            text-align: center;
-            overflow: hidden;
+            position: relative; border-radius: 18px; padding: 30px 34px; background: #0d2412;
+            background-image: linear-gradient(180deg, rgba(0, 60, 20, 0.55), rgba(0, 20, 8, 0.85)),
+                              repeating-linear-gradient(0deg, rgba(0, 255, 65, 0.10) 0px, rgba(0, 255, 65, 0.10) 1px, transparent 1px, transparent 6px);
+            background-position: 0 0, 0 0; border: 1px solid rgba(0, 255, 65, 0.35);
+            box-shadow: inset 0 0 60px rgba(0, 255, 65, 0.12), inset 0 0 4px rgba(0, 255, 65, 0.5);
+            text-align: center; overflow: hidden;
         }
+        .modal-overlay.active .modal-content { animation: scanlineDrift 12s linear infinite, terminalIdleFlicker 10s ease-in-out infinite 0.8s; }
+        .modal-content::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 40px; background: linear-gradient(180deg, rgba(0, 255, 65, 0.1), transparent); pointer-events: none; z-index: 2; }
+        @keyframes scanlineDrift { 0% { background-position: 0 0, 0 0; } 100% { background-position: 0 0, 0 60px; } }
+        @keyframes terminalIdleFlicker { 0% { filter: brightness(1); } 91% { filter: brightness(1); } 92% { filter: brightness(1.07); } 93% { filter: brightness(0.95); } 94% { filter: brightness(1.05); } 95% { filter: brightness(0.99); } 96% { filter: brightness(1.02); } 97%, 100% { filter: brightness(1); } }
+        .modal-id { position: absolute; top: 14px; left: 22px; color: #4ade80; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 0 4px rgba(74, 222, 128, 0.45); z-index: 3; }
+        .modal-content h2 { margin: 0 60px 22px 60px; color: #86efac; font-size: 22px; font-weight: 400; letter-spacing: 4px; text-transform: uppercase; text-shadow: 0 0 6px rgba(134, 239, 172, 0.55), 0 0 14px rgba(134, 239, 172, 0.25); position: relative; z-index: 3; }
+        .modal-icon { width: 126px; height: 126px; background-image: url('tilesheet.png'); background-repeat: no-repeat; image-rendering: pixelated; margin: 0 auto 22px auto; border-radius: 4px; box-shadow: inset 0 0 0 1px rgba(0, 255, 65, 0.5), 0 0 20px rgba(0, 255, 65, 0.4); position: relative; z-index: 3; }
+        .modal-desc { color: #86efac; line-height: 1.75; font-size: 15px; letter-spacing: 0.5px; text-align: left; border-top: 1px solid rgba(0, 255, 65, 0.3); padding-top: 20px; min-height: 3.5em; text-shadow: 0 0 3px rgba(134, 239, 172, 0.25); white-space: pre-wrap; cursor: pointer; position: relative; z-index: 3; }
+        .cursor { display: inline-block; color: #86efac; margin-left: 2px; animation: cursorBlink 0.8s step-end infinite; text-shadow: 0 0 6px rgba(134, 239, 172, 0.7); }
+        @keyframes cursorBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .close-btn { position: absolute; top: 10px; right: 16px; background: none; border: none; color: #4ade80; font-size: 26px; cursor: pointer; line-height: 1; font-family: inherit; text-shadow: 0 0 4px rgba(74, 222, 128, 0.4); transition: color 0.2s, text-shadow 0.2s; z-index: 4; }
+        .close-btn:hover { color: #86efac; text-shadow: 0 0 14px rgba(134, 239, 172, 0.9); }
 
-        .modal-overlay.active .modal-content {
-            animation:
-                scanlineDrift 12s linear infinite,
-                terminalIdleFlicker 10s ease-in-out infinite 0.8s;
-        }
-
-        .modal-content::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 40px;
-            background: linear-gradient(180deg, rgba(0, 255, 65, 0.1), transparent);
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        @keyframes scanlineDrift {
-            0%   { background-position: 0 0, 0 0; }
-            100% { background-position: 0 0, 0 60px; }  /* 10 шагов × 6px */
-        }
-
-        @keyframes terminalIdleFlicker {
-            0%    { filter: brightness(1); }
-            91%   { filter: brightness(1); }
-            92%   { filter: brightness(1.07); }
-            93%   { filter: brightness(0.95); }
-            94%   { filter: brightness(1.05); }
-            95%   { filter: brightness(0.99); }
-            96%   { filter: brightness(1.02); }
-            97%, 100% { filter: brightness(1); }
-        }
-
-        .modal-id {
-            position: absolute;
-            top: 14px;
-            left: 22px;
-            color: #4ade80;
-            font-size: 14px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 0 4px rgba(74, 222, 128, 0.45);
-            z-index: 3;
-        }
-
-        .modal-content h2 {
-            margin: 0 60px 22px 60px;
-            color: #86efac;
-            font-size: 22px;
-            font-weight: 400;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            text-shadow:
-                0 0 6px rgba(134, 239, 172, 0.55),
-                0 0 14px rgba(134, 239, 172, 0.25);
-            position: relative;
-            z-index: 3;
-        }
-
-        .modal-icon {
-            width: 126px;
-            height: 126px;
-            background-image: url('tilesheet.png');
-            background-repeat: no-repeat;
-            image-rendering: pixelated;
-            margin: 0 auto 22px auto;
-            border-radius: 4px;
-            box-shadow:
-                inset 0 0 0 1px rgba(0, 255, 65, 0.5),
-                0 0 20px rgba(0, 255, 65, 0.4);
-            position: relative;
-            z-index: 3;
-        }
-
-        .modal-desc {
-            color: #86efac;
-            line-height: 1.75;
-            font-size: 15px;
-            letter-spacing: 0.5px;
-            text-align: left;
-            border-top: 1px solid rgba(0, 255, 65, 0.3);
-            padding-top: 20px;
-            min-height: 3.5em;
-            text-shadow: 0 0 3px rgba(134, 239, 172, 0.25);
-            white-space: pre-wrap;
-            cursor: pointer;
-            position: relative;
-            z-index: 3;
-        }
-
-        .cursor {
-            display: inline-block;
-            color: #86efac;
-            margin-left: 2px;
-            animation: cursorBlink 0.8s step-end infinite;
-            text-shadow: 0 0 6px rgba(134, 239, 172, 0.7);
-        }
-
-        @keyframes cursorBlink {
-            0%, 100% { opacity: 1; }
-            50%      { opacity: 0; }
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 16px;
-            background: none;
-            border: none;
-            color: #4ade80;
-            font-size: 26px;
-            cursor: pointer;
-            line-height: 1;
-            font-family: inherit;
-            text-shadow: 0 0 4px rgba(74, 222, 128, 0.4);
-            transition: color 0.2s, text-shadow 0.2s;
-            z-index: 4;
-        }
-
-        .close-btn:hover {
-            color: #86efac;
-            text-shadow: 0 0 14px rgba(134, 239, 172, 0.9);
-        }
-
-        .empty-state {
-            grid-column: 1 / -1;
-            text-align: center;
-            color: #6b5b8c;
-            padding: 90px 20px;
-            font-size: 16px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            line-height: 2;
-        }
-
-        #count {
-            color: #8b7aa8;
-            margin: 22px 0;
-            font-size: 14px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            line-height: 1;
-            padding-left: 3px;
-        }
+        /* ===== Футер ===== */
+        .footer { text-align: center; margin: 26px auto 0; padding: 0 10px 30px; color: #7c6ba0; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; line-height: 1.8; text-shadow: 0 0 6px rgba(139, 92, 246, 0.35); opacity: 0.85; }
+        .footer .accent { color: #a78bfa; text-shadow: 0 0 8px rgba(167, 139, 250, 0.6); }
 
         @media (max-width: 500px) {
             h1 { font-size: 22px; letter-spacing: 6px; }
             h1::before, h1::after { width: 16px; margin: 0 8px; }
             .modal-content { padding: 24px 20px; }
             .modal-content h2 { margin: 0 40px 18px 40px; font-size: 18px; letter-spacing: 2px; }
-        }
-
-        /* ===== Подпись под сеткой ===== */
-        .footer {
-            text-align: center;
-            margin: 26px auto 0;
-            padding: 0 10px 30px;
-            color: #7c6ba0;
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            line-height: 1.8;
-            text-shadow: 0 0 6px rgba(139, 92, 246, 0.35);
-            opacity: 0.85;
-        }
-
-        .footer .accent {
-            color: #a78bfa;
-            text-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
+            .tier-header { width: 60px; font-size: 18px; }
         }
     </style>
 </head>
@@ -599,16 +277,46 @@
 
     <div class="header">
         <h1>Предметы</h1>
-        <input type="text" id="search" placeholder="Поиск по названию, описанию или ID...">
-        <div id="count" class="count-display"></div>
+        <div style="margin-bottom: 20px;">
+            <button id="btn-catalog" class="nav-btn active">Каталог</button>
+            <button id="btn-tierlist" class="nav-btn">Тир-лист</button>
+        </div>
     </div>
 
-    <div id="grid" class="item-grid"></div>
-    <div class="footer">
-        Сайт с предметами из игры <span class="accent">Unexplored</span> от <span class="accent">Shrimp</span><br>
-        Навайбкодено при помощи <span class="accent">DeepSeek</span>
+    <!-- ===== Режим каталога ===== -->
+    <div id="catalog-view">
+        <div class="header" style="margin-bottom: 20px;">
+            <input type="text" id="search" placeholder="Поиск по названию, описанию или ID...">
+            <div id="count" class="count-display"></div>
+        </div>
+        <div id="grid" class="item-grid"></div>
+        <div class="footer">
+            Сайт с предметами из игры <span class="accent">Unexplored</span> от <span class="accent">Shrimp</span><br>
+            Навайбкодено при помощи <span class="accent">DeepSeek</span>
+        </div>
     </div>
 
+    <!-- ===== Режим тир-листа ===== -->
+    <div id="tierlist-view" class="view-container">
+        <div class="tier-controls">
+            <button id="add-tier-btn" class="tier-btn">+ Добавить тир</button>
+            <button id="save-json-btn" class="tier-btn">Сохранить JSON</button>
+            <label class="tier-btn" style="display: inline-block;">
+                Загрузить JSON
+                <input type="file" id="load-json-input" accept=".json" style="display: none;">
+            </label>
+            <button id="reset-tierlist-btn" class="tier-btn danger">Сбросить</button>
+        </div>
+
+        <div id="tiers-container" class="tier-container"></div>
+
+        <div class="unranked-section">
+            <h3>Нераспределенные предметы</h3>
+            <div id="unranked-container" class="unranked-container" data-tier-id="unranked"></div>
+        </div>
+    </div>
+
+    <!-- Модалка -->
     <div id="modal-overlay" class="modal-overlay">
         <div class="modal-frame">
             <div class="modal-content">
@@ -888,6 +596,7 @@
             { id: 263, name: "Картечь", desc: "Шанс выстрелить на 4 снаряда больше с увеличенным в 2 раза разбросом. Шанс зависит от удачи."}
         ];
 
+        // ===== Элементы DOM =====
         const grid = document.getElementById('grid');
         const searchInput = document.getElementById('search');
         const countDisplay = document.getElementById('count');
@@ -898,27 +607,47 @@
         const modalId = document.getElementById('modal-id');
         const closeModalBtn = document.getElementById('close-modal');
 
+        const btnCatalog = document.getElementById('btn-catalog');
+        const btnTierlist = document.getElementById('btn-tierlist');
+        const catalogView = document.getElementById('catalog-view');
+        const tierlistView = document.getElementById('tierlist-view');
+        const tiersContainer = document.getElementById('tiers-container');
+        const unrankedContainer = document.getElementById('unranked-container');
+        const addTierBtn = document.getElementById('add-tier-btn');
+        const saveJsonBtn = document.getElementById('save-json-btn');
+        const loadJsonInput = document.getElementById('load-json-input');
+        const resetTierlistBtn = document.getElementById('reset-tierlist-btn');
+
         const scale = 3;
         const tileSize = 21;
         const columns = 20;
 
-        // ===== Все таймеры и защита от повторных срабатываний =====
+        // ===== Состояние каталога =====
         let typewriterTimer = null;
         let openStartTimer = null;
         let closeCleanupTimer = null;
-
         let typewriterFullText = '';
         let typewriterElement = null;
         let typewriterIndex = 0;
-
-        // Throttle: игнорируем повторные клики по иконкам в течение 80 мс
         let lastOpenTime = 0;
         const OPEN_THROTTLE_MS = 80;
-
-        // Кеш высот описаний — чтобы не дёргать reflow на каждый клик
         const heightCache = new Map();
         let heightCacheWidth = window.innerWidth;
 
+        // ===== Состояние тир-листа =====
+        let tierData = {
+            tiers: [
+                { id: 's', name: 'S', color: '#ff7f7f', items: [] },
+                { id: 'a', name: 'A', color: '#ffbf7f', items: [] },
+                { id: 'b', name: 'B', color: '#ffff7f', items: [] },
+                { id: 'c', name: 'C', color: '#bfff7f', items: [] },
+                { id: 'd', name: 'D', color: '#7fffff', items: [] },
+                { id: 'f', name: 'F', color: '#bf7fff', items: [] }
+            ],
+            unranked: items.map(i => i.id)
+        };
+
+        // ===== Вспомогательные функции =====
         function cancelAllTimers() {
             if (typewriterTimer) { clearInterval(typewriterTimer); typewriterTimer = null; }
             if (openStartTimer)  { clearTimeout(openStartTimer);  openStartTimer = null; }
@@ -932,6 +661,7 @@
             return `-${x}px -${y}px`;
         }
 
+        // ===== Каталог =====
         function renderItems(filteredItems) {
             grid.innerHTML = '';
             countDisplay.textContent = `найдено предметов: ${filteredItems.length}`;
@@ -1007,7 +737,6 @@
         }
 
         function getDescriptionHeight(item) {
-            // Если ширина окна изменилась — сбрасываем кеш
             if (window.innerWidth !== heightCacheWidth) {
                 heightCache.clear();
                 heightCacheWidth = window.innerWidth;
@@ -1020,7 +749,6 @@
         }
 
         function openModal(item) {
-            // Защита от быстрых повторных кликов
             const now = performance.now();
             if (now - lastOpenTime < OPEN_THROTTLE_MS) return;
             lastOpenTime = now;
@@ -1046,7 +774,6 @@
             modalDesc.style.minHeight = targetHeight + 'px';
             modalDesc.innerHTML = '';
 
-            // Показываем окно только если оно закрыто — иначе просто меняем содержимое
             if (!wasOpen) {
                 modal.classList.add('active');
             }
@@ -1059,9 +786,7 @@
 
         function closeModal() {
             cancelAllTimers();
-
             if (!modal.classList.contains('active')) return;
-
             modal.classList.remove('active');
 
             closeCleanupTimer = setTimeout(() => {
@@ -1071,11 +796,8 @@
             }, 400);
         }
 
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
         closeModalBtn.addEventListener('click', closeModal);
-
         modalDesc.addEventListener('click', skipTypewriter);
 
         function filterItems(query) {
@@ -1094,11 +816,232 @@
         }
 
         searchInput.addEventListener('input', (e) => {
-            const query = e.target.value;
-            const filtered = filterItems(query);
+            const filtered = filterItems(e.target.value);
             renderItems(filtered);
         });
 
+        // ===== Тир-лист =====
+        function renderTierList() {
+            tiersContainer.innerHTML = '';
+            
+            // ВАЖНО: используем только целые числа для размеров, чтобы избежать зазоров
+            const isMobile = window.innerWidth <= 500;
+            const itemSize = isMobile ? 42 : 52; 
+            const bgWidth = columns * itemSize;
+            const totalRows = Math.ceil(items.length / columns);
+            const bgHeight = totalRows * itemSize;
+
+            const createItemEl = (itemId) => {
+                const itemEl = document.createElement('div');
+                itemEl.className = 'tier-item';
+                itemEl.style.width = `${itemSize}px`;
+                itemEl.style.height = `${itemSize}px`;
+                itemEl.style.backgroundSize = `${bgWidth}px ${bgHeight}px`;
+                
+                const index = itemId - 1;
+                const x = (index % columns) * itemSize;
+                const y = Math.floor(index / columns) * itemSize;
+                itemEl.style.backgroundPosition = `-${x}px -${y}px`;
+
+                const itemObj = items.find(i => i.id === itemId);
+                itemEl.title = itemObj ? itemObj.name : 'Unknown';
+                itemEl.draggable = true;
+                itemEl.addEventListener('dragstart', e => {
+                    e.dataTransfer.setData('text/plain', itemId);
+                    e.dataTransfer.effectAllowed = 'move';
+                });
+                itemEl.addEventListener('click', () => openModal(itemObj));
+                return itemEl;
+            };
+
+            tierData.tiers.forEach(tier => {
+                const row = document.createElement('div');
+                row.className = 'tier-row';
+
+                const header = document.createElement('div');
+                header.className = 'tier-header';
+                header.style.backgroundColor = tier.color;
+                
+                const colorInput = document.createElement('input');
+                colorInput.type = 'color';
+                colorInput.value = tier.color;
+                colorInput.title = 'Изменить цвет';
+                colorInput.addEventListener('input', (e) => {
+                    tier.color = e.target.value;
+                    header.style.backgroundColor = tier.color;
+                });
+
+                const nameSpan = document.createElement('span');
+                nameSpan.textContent = tier.name;
+                nameSpan.title = 'Кликните, чтобы изменить название';
+
+                header.appendChild(colorInput);
+                header.appendChild(nameSpan);
+                
+                // Удаление тира
+                const delBtn = document.createElement('button');
+                delBtn.className = 'delete-tier-btn';
+                delBtn.innerHTML = '×';
+                delBtn.title = 'Удалить тир (предметы вернутся в пул)';
+                delBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    tierData.unranked.push(...tier.items);
+                    tierData.tiers = tierData.tiers.filter(t => t.id !== tier.id);
+                    renderTierList();
+                });
+                header.appendChild(delBtn);
+
+                header.addEventListener('click', (e) => {
+                    if (e.target.tagName === 'INPUT' || e.target.tagName === 'BUTTON') return;
+                    const newName = prompt('Введите новое название тира:', tier.name);
+                    if (newName !== null && newName.trim() !== '') {
+                        tier.name = newName.trim().substring(0, 3);
+                        renderTierList();
+                    }
+                });
+
+                const itemsContainer = document.createElement('div');
+                itemsContainer.className = 'tier-items';
+                itemsContainer.dataset.tierId = tier.id;
+
+                itemsContainer.addEventListener('dragover', e => { e.preventDefault(); itemsContainer.classList.add('drag-over'); });
+                itemsContainer.addEventListener('dragleave', e => { itemsContainer.classList.remove('drag-over'); });
+                itemsContainer.addEventListener('drop', e => {
+                    e.preventDefault();
+                    itemsContainer.classList.remove('drag-over');
+                    const itemId = parseInt(e.dataTransfer.getData('text/plain'));
+                    if (!isNaN(itemId)) {
+                        moveItem(itemId, tier.id);
+                    }
+                });
+
+                tier.items.forEach(itemId => {
+                    itemsContainer.appendChild(createItemEl(itemId));
+                });
+
+                row.appendChild(header);
+                row.appendChild(itemsContainer);
+                tiersContainer.appendChild(row);
+            });
+
+            // Рендер нераспределенных
+            unrankedContainer.innerHTML = '';
+            
+            unrankedContainer.addEventListener('dragover', e => { e.preventDefault(); unrankedContainer.classList.add('drag-over'); });
+            unrankedContainer.addEventListener('dragleave', e => { unrankedContainer.classList.remove('drag-over'); });
+            unrankedContainer.addEventListener('drop', e => {
+                e.preventDefault();
+                unrankedContainer.classList.remove('drag-over');
+                const itemId = parseInt(e.dataTransfer.getData('text/plain'));
+                if (!isNaN(itemId)) {
+                    moveItem(itemId, 'unranked');
+                }
+            });
+
+            tierData.unranked.forEach(itemId => {
+                unrankedContainer.appendChild(createItemEl(itemId));
+            });
+        }
+
+        function moveItem(itemId, targetTierId) {
+            tierData.unranked = tierData.unranked.filter(id => id !== itemId);
+            tierData.tiers.forEach(t => {
+                t.items = t.items.filter(id => id !== itemId);
+            });
+
+            if (targetTierId === 'unranked') {
+                tierData.unranked.push(itemId);
+            } else {
+                const tier = tierData.tiers.find(t => t.id === targetTierId);
+                if (tier) tier.items.push(itemId);
+            }
+
+            renderTierList();
+        }
+
+        // Управление видами
+        btnCatalog.addEventListener('click', () => {
+            btnCatalog.classList.add('active');
+            btnTierlist.classList.remove('active');
+            catalogView.style.display = 'block';
+            tierlistView.style.display = 'none';
+        });
+
+        btnTierlist.addEventListener('click', () => {
+            btnTierlist.classList.add('active');
+            btnCatalog.classList.remove('active');
+            catalogView.style.display = 'none';
+            tierlistView.style.display = 'block';
+            renderTierList();
+        });
+
+        // Добавление тира
+        addTierBtn.addEventListener('click', () => {
+            const name = prompt('Введите название нового тира (например, S+, SSS):');
+            if (name && name.trim() !== '') {
+                const newTier = {
+                    id: 'tier_' + Date.now(),
+                    name: name.trim().substring(0, 3),
+                    color: '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0'),
+                    items: []
+                };
+                tierData.tiers.unshift(newTier);
+                renderTierList();
+            }
+        });
+
+        // Сохранение/Загрузка JSON
+        saveJsonBtn.addEventListener('click', () => {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(tierData, null, 2));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", "tierlist.json");
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        });
+
+        loadJsonInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                try {
+                    const loadedData = JSON.parse(event.target.result);
+                    if (loadedData && Array.isArray(loadedData.tiers) && Array.isArray(loadedData.unranked)) {
+                        tierData = loadedData;
+                        renderTierList();
+                    } else {
+                        alert('Неверный формат файла!');
+                    }
+                } catch (err) {
+                    alert('Ошибка при чтении JSON файла!');
+                }
+            };
+            reader.readAsText(file);
+            e.target.value = '';
+        });
+
+        // Сброс тир-листа
+        resetTierlistBtn.addEventListener('click', () => {
+            if (confirm('Вы уверены, что хотите сбросить тир-лист? Все предметы вернутся на свои места.')) {
+                tierData = {
+                    tiers: [
+                        { id: 's', name: 'S', color: '#ff7f7f', items: [] },
+                        { id: 'a', name: 'A', color: '#ffbf7f', items: [] },
+                        { id: 'b', name: 'B', color: '#ffff7f', items: [] },
+                        { id: 'c', name: 'C', color: '#bfff7f', items: [] },
+                        { id: 'd', name: 'D', color: '#7fffff', items: [] },
+                        { id: 'f', name: 'F', color: '#bf7fff', items: [] }
+                    ],
+                    unranked: items.map(i => i.id)
+                };
+                renderTierList();
+            }
+        });
+
+        // Инициализация
         renderItems(items);
     </script>
 </body>
