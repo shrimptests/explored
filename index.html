@@ -191,7 +191,6 @@
         .delete-tier-btn { position: absolute; top: 2px; right: 2px; background: rgba(0,0,0,0.3); border: none; color: rgba(0,0,0,0.6); cursor: pointer; font-size: 12px; border-radius: 2px; z-index: 2; padding: 2px 5px; }
         .delete-tier-btn:hover { color: #000; background: rgba(255,255,255,0.5); }
 
-        /* Иконка в тир-листе. Никаких border, чтобы не сжимать фон */
         .tier-item {
             box-sizing: border-box;
             background-image: url('tilesheet.png'); 
@@ -200,13 +199,26 @@
             image-rendering: crisp-edges; 
             border-radius: 2px;
             cursor: grab; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(0,0,0,0.5); /* Используем тень для рамки */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(0,0,0,0.5);
             transition: transform 0.1s; 
             position: relative;
-            /* Размеры и background-size задаются динамически в JS */
+            touch-action: none; /* Отключаем скролл при перетаскивании на тач-экранах */
+            user-select: none;
+            -webkit-user-select: none;
         }
         .tier-item:active { cursor: grabbing; }
         .tier-item:hover { transform: scale(1.1); z-index: 10; }
+
+        /* Стили для "призрака" при перетаскивании */
+        .drag-ghost {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.85;
+            transform: scale(1.15);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+            border: 1px solid rgba(167, 139, 250, 0.8);
+        }
 
         .unranked-section { background: rgba(12, 6, 24, 0.6); border: 1px solid rgba(167, 139, 250, 0.2); border-radius: 4px; padding: 15px; margin-bottom: 20px; }
         .unranked-section h3 { margin: 0 0 15px 0; font-size: 16px; color: #a78bfa; text-transform: uppercase; letter-spacing: 2px; }
@@ -820,11 +832,117 @@
             renderItems(filtered);
         });
 
-        // ===== Тир-лист =====
+        // ===== СИСТЕМА DRAG AND DROP (Pointer Events) =====
+        let dragState = null;
+
+        function initDragAndDrop() {
+            // Единый обработчик pointerdown для всех предметов
+            document.addEventListener('pointerdown', (e) => {
+                const itemEl = e.target.closest('.tier-item');
+                if (!itemEl || e.button !== 0) return; // Только ЛКМ
+
+                const itemId = parseInt(itemEl.dataset.id);
+                const itemObj = items.find(i => i.id === itemId);
+                if (!itemObj) return;
+
+                // Создаем «призрак» для перетаскивания
+                const ghost = itemEl.cloneNode(true);
+                ghost.classList.add('drag-ghost');
+                const rect = itemEl.getBoundingClientRect();
+                
+                ghost.style.width = rect.width + 'px';
+                ghost.style.height = rect.height + 'px';
+                ghost.style.left = rect.left + 'px';
+                ghost.style.top = rect.top + 'px';
+                
+                document.body.appendChild(ghost);
+                itemEl.style.opacity = '0.3'; // Приглушаем оригинал
+
+                dragState = {
+                    itemId: itemId,
+                    itemEl: itemEl,
+                    itemObj: itemObj,
+                    ghost: ghost,
+                    startX: e.clientX,
+                    startY: e.clientY,
+                    offsetX: e.clientX - rect.left,
+                    offsetY: e.clientY - rect.top,
+                    isDragging: false,
+                    dropTarget: null
+                };
+
+                document.addEventListener('pointermove', onPointerMove);
+                document.addEventListener('pointerup', onPointerUp);
+            });
+
+            function onPointerMove(e) {
+                if (!dragState) return;
+
+                const dx = e.clientX - dragState.startX;
+                const dy = e.clientY - dragState.startY;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                // Начинаем перетаскивание только если сдвинули мышь на 5px (защита от случайных кликов)
+                if (!dragState.isDragging && dist > 5) {
+                    dragState.isDragging = true;
+                }
+
+                if (dragState.isDragging) {
+                    // Используем requestAnimationFrame для плавности (защита от лагов)
+                    requestAnimationFrame(() => {
+                        if (!dragState) return;
+                        dragState.ghost.style.left = (e.clientX - dragState.offsetX) + 'px';
+                        dragState.ghost.style.top = (e.clientY - dragState.offsetY) + 'px';
+
+                        // Скрываем призрак, чтобы elementFromPoint видел, что под ним
+                        dragState.ghost.style.display = 'none';
+                        const target = document.elementFromPoint(e.clientX, e.clientY);
+                        dragState.ghost.style.display = '';
+
+                        // Ищем контейнер для сброса
+                        let newDropTarget = null;
+                        if (target) {
+                            newDropTarget = target.closest('.tier-items, .unranked-container');
+                        }
+
+                        if (dragState.dropTarget !== newDropTarget) {
+                            if (dragState.dropTarget) dragState.dropTarget.classList.remove('drag-over');
+                            if (newDropTarget) newDropTarget.classList.add('drag-over');
+                            dragState.dropTarget = newDropTarget;
+                        }
+                    });
+                }
+            }
+
+            function onPointerUp(e) {
+                if (!dragState) return;
+                document.removeEventListener('pointermove', onPointerMove);
+                document.removeEventListener('pointerup', onPointerUp);
+
+                if (dragState.ghost) dragState.ghost.remove();
+                if (dragState.itemEl) dragState.itemEl.style.opacity = '';
+                if (dragState.dropTarget) dragState.dropTarget.classList.remove('drag-over');
+
+                if (dragState.isDragging) {
+                    // Это был дроп
+                    if (dragState.dropTarget) {
+                        const targetTierId = dragState.dropTarget.dataset.tierId;
+                        if (targetTierId) {
+                            moveItem(dragState.itemId, targetTierId);
+                        }
+                    }
+                } else {
+                    // Это был клик (так как мышь не двигалась)
+                    openModal(dragState.itemObj);
+                }
+
+                dragState = null;
+            }
+        }
+
         function renderTierList() {
             tiersContainer.innerHTML = '';
             
-            // ВАЖНО: используем только целые числа для размеров, чтобы избежать зазоров
             const isMobile = window.innerWidth <= 500;
             const itemSize = isMobile ? 42 : 52; 
             const bgWidth = columns * itemSize;
@@ -834,6 +952,7 @@
             const createItemEl = (itemId) => {
                 const itemEl = document.createElement('div');
                 itemEl.className = 'tier-item';
+                itemEl.dataset.id = itemId; // Сохраняем ID для DnD
                 itemEl.style.width = `${itemSize}px`;
                 itemEl.style.height = `${itemSize}px`;
                 itemEl.style.backgroundSize = `${bgWidth}px ${bgHeight}px`;
@@ -845,12 +964,7 @@
 
                 const itemObj = items.find(i => i.id === itemId);
                 itemEl.title = itemObj ? itemObj.name : 'Unknown';
-                itemEl.draggable = true;
-                itemEl.addEventListener('dragstart', e => {
-                    e.dataTransfer.setData('text/plain', itemId);
-                    e.dataTransfer.effectAllowed = 'move';
-                });
-                itemEl.addEventListener('click', () => openModal(itemObj));
+                
                 return itemEl;
             };
 
@@ -878,7 +992,6 @@
                 header.appendChild(colorInput);
                 header.appendChild(nameSpan);
                 
-                // Удаление тира
                 const delBtn = document.createElement('button');
                 delBtn.className = 'delete-tier-btn';
                 delBtn.innerHTML = '×';
@@ -904,17 +1017,6 @@
                 itemsContainer.className = 'tier-items';
                 itemsContainer.dataset.tierId = tier.id;
 
-                itemsContainer.addEventListener('dragover', e => { e.preventDefault(); itemsContainer.classList.add('drag-over'); });
-                itemsContainer.addEventListener('dragleave', e => { itemsContainer.classList.remove('drag-over'); });
-                itemsContainer.addEventListener('drop', e => {
-                    e.preventDefault();
-                    itemsContainer.classList.remove('drag-over');
-                    const itemId = parseInt(e.dataTransfer.getData('text/plain'));
-                    if (!isNaN(itemId)) {
-                        moveItem(itemId, tier.id);
-                    }
-                });
-
                 tier.items.forEach(itemId => {
                     itemsContainer.appendChild(createItemEl(itemId));
                 });
@@ -924,20 +1026,7 @@
                 tiersContainer.appendChild(row);
             });
 
-            // Рендер нераспределенных
             unrankedContainer.innerHTML = '';
-            
-            unrankedContainer.addEventListener('dragover', e => { e.preventDefault(); unrankedContainer.classList.add('drag-over'); });
-            unrankedContainer.addEventListener('dragleave', e => { unrankedContainer.classList.remove('drag-over'); });
-            unrankedContainer.addEventListener('drop', e => {
-                e.preventDefault();
-                unrankedContainer.classList.remove('drag-over');
-                const itemId = parseInt(e.dataTransfer.getData('text/plain'));
-                if (!isNaN(itemId)) {
-                    moveItem(itemId, 'unranked');
-                }
-            });
-
             tierData.unranked.forEach(itemId => {
                 unrankedContainer.appendChild(createItemEl(itemId));
             });
@@ -1042,6 +1131,7 @@
         });
 
         // Инициализация
+        initDragAndDrop();
         renderItems(items);
     </script>
 </body>
